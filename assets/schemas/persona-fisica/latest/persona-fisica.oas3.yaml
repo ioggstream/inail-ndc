@@ -35,41 +35,41 @@ components:
       x-jsonld-type: https://w3id.org/italia/work-accident/onto/core/PersonaFisica
       x-jsonld-context:
         "@vocab": "https://w3id.org/italia/work-accident/onto/core/"
-        codice_fiscale_persona: codiceFiscale
-        eta_persona: eta
-        data_nascita_persona: dataDiNascita
-        nome_persona: nomePersona
-        cognome_persona: cognomePersona
-        sesso_persona: sesso
+        codice_fiscale: codiceFiscale
+        eta: eta
+        data_nascita: dataDiNascita
+        nome: nomePersona
+        cognome: cognomePersona
+        sesso: sesso
         ha_cittadinanza:
          "@id": personaHaCittadinanza
       additionalProperties: true
       description:
           Questo schema rappresenta una persona fisica ed è associato ad https://w3id.org/italia/work-accident/onto/core/PersonaFisica.
       required:
-      - codice_fiscale_persona
-      - eta_persona
-      - data_nascita_persona
-      - nome_persona
-      - cognome_persona
-      - sesso_persona
+      - codice_fiscale
+      - eta
+      - data_nascita
+      - nome_proprio
+      - cognome
+      - sesso
       properties:
-        codice_fiscale_persona:
+        codice_fiscale:
           $ref: "#/components/schemas/CodiceFiscale"
-        eta_persona:
+        eta:
           type: integer
           format: int32
-        data_nascita_persona:
+        data_nascita:
           type: string
           format: date
           pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
-        nome_persona:
+        nome_proprio:
           type: string
           maxLength: 50
-        cognome_persona:
+        cognome:
           type: string
           maxLength: 50
-        sesso_persona:
+        sesso:
           type: string
           maxLength: 10
         ha_cittadinanza:
@@ -77,12 +77,12 @@ components:
           items:
             $ref: "#/components/schemas/Cittadinanza"
       example:
-        codice_fiscale_persona: 'MRARSS90T10H501F'
-        eta_persona: 20
-        data_nascita_persona: '1990-12-10'
-        nome_persona: 'Mario'
-        cognome_persona: 'Rossi'
-        sesso_persona: 'M'
+        codice_fiscale: 'MRARSS90T10H501F'
+        eta: 20
+        data_nascita: '1990-12-10'
+        nome_proprio: 'Mario'
+        cognome: 'Rossi'
+        sesso: 'M'
         ha_cittadinanza:
           codice_belfiore_cittadinanza: 'Z107'
           descrizione_cittadinanza: 'Danimarca'
