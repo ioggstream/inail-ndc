@@ -40,9 +40,13 @@ components:
         data_nascita: dataDiNascita
         nome_proprio: nomePersona
         cognome: cognomePersona
-        sesso: sesso
+        sesso:
+          "@id": sesso
+          "@type": "@id"
+          "@context":
+            "@base": "https://w3id.org/italia/controlled-vocabulary/classifications-for-people/sex/"
         ha_cittadinanza:
-         "@id": personaHaCittadinanza
+          "@id": personaHaCittadinanza
       additionalProperties: true
       description:
           Questo schema rappresenta una persona fisica ed è associato ad https://w3id.org/italia/work-accident/onto/core/PersonaFisica.
