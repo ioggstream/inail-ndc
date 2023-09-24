@@ -38,7 +38,7 @@ components:
         codice_fiscale: codiceFiscale
         eta: eta
         data_nascita: dataDiNascita
-        nome: nomePersona
+        nome_proprio: nomePersona
         cognome: cognomePersona
         sesso: sesso
         ha_cittadinanza:
@@ -84,8 +84,8 @@ components:
         cognome: 'Rossi'
         sesso: 'M'
         ha_cittadinanza:
-          codice_belfiore_cittadinanza: 'Z107'
-          descrizione_cittadinanza: 'Danimarca'
+          codice_belfiore: 'Z107'
+          descrizione: 'Danimarca'
           unione_europea: 'S'
 
     Cittadinanza:
@@ -104,10 +104,10 @@ components:
       - descrizione_cittadinanza
       - unione_europea
       properties:
-        codice_belfiore_cittadinanza:
+        codice_belfiore:
           type: string
           maxLength: 10
-        descrizione_cittadinanza:
+        descrizione:
           type: string
           maxLength: 50
         unione_europea:
